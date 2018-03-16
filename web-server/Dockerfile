@@ -1,0 +1,4 @@
+FROM php:7.0-apache
+MAINTAINER tig4605246
+COPY www /var/
+EXPOSE 80

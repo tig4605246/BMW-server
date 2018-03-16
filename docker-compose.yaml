@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  bmw-web:
+    image: test-bmw:latest
+    restart: unless-stopped
+    environment:
+      - EXAMPLE_VAR=55688
+    ports:
+      - 80:80
+    volumes:
+      - ./bmw-server/web-server:/var/www
+
+
+# volume:
+#   certs:
+#     driver: local
+#   certs-data:
+#     driver: local
